@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         try {
-            const response = await fetch('http://localhost:4000/api/url/shorten', {
+            const response = await fetch('https://ubiquitous-naiad-901693.netlify.app/api/url/shorten', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            const shortUrl = `http://localhost:4000/${data.urlCode}`;
+            const shortUrl = `https://ubiquitous-naiad-901693.netlify.app/${data.urlCode}`;
             shortUrlElement.textContent = shortUrl;
             resultContainer.style.display = 'block';
             
